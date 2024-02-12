@@ -4,7 +4,35 @@
     <meta charset="UTF-8">
     <title>Obligatorisk - KINOBILLETT OPPGAVE</title>
     <script>
+    let billettListe = [];
+    function KjopB(){
+        const film =document.getElementById("film").value;
+        const antall = document.getElementById("antall").value;
+        const fornavn = document.getElementById("fornavn").value;
+        const etternavn = document.getElementById("etternavn").value;
+        const telefonnr = document.getElementById("telefonnr").value;
+        const epost = document.getElementById("epost").value;
 
+        if (!film || !antall || !fornacn || !etternavn || !telefonnr || !epost) {
+            alert("Dust! du må fylle ut alle felt for å kjøpe billett.")
+            return;
+        }
+
+        const billett = {
+            film,
+            antall,
+            fornavn,
+            etternavn,
+            telefonnr,
+            epost
+        };
+        billettListe.push(billett);
+        visBilletter();
+        nullstillInput();
+    }
+    function visBilletter(){
+        const billettListe1 = document.getElementById(billettListe)
+    }
     </script>
 </head>
 <body>
