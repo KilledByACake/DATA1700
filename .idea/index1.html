@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Obligatorisk oppgave 1</title>
+    <title>Obligatorisk - KINOBILLETT OPPGAVE</title>
+    <script>
+
+    </script>
 </head>
 <body>
-<h1>pvbepe</h1>
+<h1>BESTILLING AV KINOBILLETTER</h1>
+Film: <select id="film" name="film">
+    <option value="film1">The Hub of Gits</option>
+    <option value="film2">Githubs Undergang</option>
+</select>
+
+Antall billetter: <input type="number" id="antall" required>
+Fornavn: <input type="text" id="fornavn" required>
+Etternavn: <input type="text" id="etternavn" required>
+Telefonnummer: <input type="number" id="telefonnr" required>
+Epostadresse: <input type="text" id="epost" required>
+<button onclick="kjopB()">Kjøp en dum billett</button>
+
+<h2>Alle billetter</h2>
+<ul id="billettListe"></ul>
+<button onclick="slettB">Slett alle dumme billetter</button>
+
 </body>
-</html>k
+</html>
