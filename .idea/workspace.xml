@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="script?">
-      <change beforePath="$PROJECT_DIR$/.idea/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="tester igjen" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +39,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/files" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +95,28 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1707774967531</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="tester">
+      <option name="closed" value="true" />
+      <created>1707831302598</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1707831302598</updated>
+    </task>
+    <task id="LOCAL−00008" summary="tester igjen">
+      <option name="closed" value="true" />
+      <created>1707831439365</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1707831439365</updated>
+    </task>
+    <task id="LOCAL−00009" summary="tester igjen">
+      <option name="closed" value="true" />
+      <created>1707831922340</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1707831922340</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +139,8 @@
     <MESSAGE value="HVORFOR KOMEMR DET IKKE OPP PÅ NETTSIDEN" />
     <MESSAGE value="for helvete" />
     <MESSAGE value="script?" />
-    <option name="LAST_COMMIT_MESSAGE" value="script?" />
+    <MESSAGE value="tester" />
+    <MESSAGE value="tester igjen" />
+    <option name="LAST_COMMIT_MESSAGE" value="tester igjen" />
   </component>
 </project>
