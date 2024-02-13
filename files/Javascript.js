@@ -1,81 +1,143 @@
+// Oppretter en tom liste for billetter
 let billettListe = [];
 
+// Funksjon for å kjøpe billett
 function KjopB() {
-const film = document.getElementById("film").value;
-const antall = document.getElementById("antall").value;
-const fornavn = document.getElementById("fornavn").value;
-const etternavn = document.getElementById("etternavn").value;
-const telefonnr = document.getElementById("telefonnr").value;
-const epost = document.getElementById("epost").value;
+    const film = document.getElementById("film").value;
+    const antall = document.getElementById("antall").value;
+    const fornavn = document.getElementById("fornavn").value;
+    const etternavn = document.getElementById("etternavn").value;
+    const telefonnr = document.getElementById("telefonnr").value;
+    const epost = document.getElementById("epost").value;
 
-if (!film) {
-    alert("Du må velge film for å kjøpe billett.");
-    return;
+    // Tilbakestill tidligere feilmeldinger
+    resetErrorMessages();
+
+    // Oppretter en liste for feilmeldinger
+    let errorMessages = [];
+
+    // Validerer input-verdier
+    if (!film) {
+        errorMessages.push("Du må velge film for å kjøpe billett.");
+    }
+    if (!antall || isNaN(antall)) {
+        errorMessages.push("Du må velge et gyldig tall for antall billetter.");
+    }
+    if (!fornavn) {
+        errorMessages.push("Du må fylle ut fornavn for å kjøpe billett.");
+    }
+    if (!etternavn) {
+        errorMessages.push("Du må fylle ut etternavn for å kjøpe billett.");
+    }
+    if (!telefonnr || isNaN(telefonnr)) {
+        errorMessages.push("Du må skrive inn et gyldig telefonnummer.");
+    }
+    if (!epost || epost.indexOf('@') === -1) {
+        errorMessages.push("Du må fylle inn en gyldig e-postadresse.");
+    }
+
+    // Håndterer feilmeldinger
+    if (errorMessages.length > 0) {
+        displayErrorMessages(errorMessages);
+        return;
+    }
+
+    // Oppretter billett-objekt og legger til i listen
+    const billett = {
+        film,
+        antall,
+        fornavn,
+        etternavn,
+        telefonnr,
+        epost
+    };
+
+    billettListe.push(billett);
+
+    // Oppdaterer visningen av billetter
+    visBilletter();
+
+    // Tilbakestill skjemaet
+    nullstillInput();
 }
-if (!antall ) {
-    alert("Du må velge antall billetter.");
-    return;
-}
-if (!fornavn) {
-    alert("Du må fylle ut fornavn for å kjøpe billett.");
-    return;
-}
-if (!etternavn) {
-    alert("Du må fylle ut etternavn for å kjøpe billett.");
-    return;
-}
-if (!telefonnr) {
-    alert("Du må fylle ut telefonnummer for å kjøpe billett.");
-    return;
-}
-if (!epost) {
-    alert("Du må fylle ut epost for å kjøpe billett.");
-    return;
-}
-if (!film || !antall || !fornavn || !etternavn || !telefonnr || !epost) {
-    alert("Du må fylle ut alle felt for å kjøpe billett.");
-    return;
+// Funksjon for å mappe feilmeldinger til riktig input-felt
+function getInputElementId(errorMessage) {
+    switch (errorMessage) {
+        case "Du må velge film for å kjøpe billett.":
+            return "film";
+        case "Du må velge et gyldig tall for antall billetter.":
+            return "antall";
+        case "Du må fylle ut fornavn for å kjøpe billett.":
+            return "fornavn";
+        case "Du må fylle ut etternavn for å kjøpe billett.":
+            return "etternavn";
+        case "Du må skrive inn et gyldig telefonnummer.":
+            return "telefonnr";
+        case "Du må fylle inn en gyldig e-postadresse.":
+            return "epost";
+        default:
+            return "";
+    }
 }
 
-
-const billett = {
-film,
-antall,
-fornavn,
-etternavn,
-telefonnr,
-epost
-};
-
-billettListe.push(billett);
-visBilletter();
-nullstillInput();
-}
-
+// Funksjon for å vise billetter i HTML
 function visBilletter() {
-const billettListeElement = document.getElementById("billettListe");
-billettListeElement.innerHTML = "";
+    const billettListeElement = document.getElementById("billettListe");
+    billettListeElement.innerHTML = "";
 
+    // Oppretter HTML-tabell
+    let ut = "<table><tr>" +
+        "<th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th>" +
+        "</tr>";
 
-//FIKS
-for (let i = 0; i < billettListe.length; i++) {
-const billettElement = document.createElement("li");
-const billett = billettListe[i];
-billettElement.textContent = `${billett.film} - ${billett.antall} billetter - ${billett.fornavn} ${billett.etternavn}`;
-billettListeElement.appendChild(billettElement);
+    // Legger til billetter i tabellen
+    for (let p of billettListe) {
+        ut += "<tr>";
+        ut += "<td>" + p.fornavn + "</td><td>" + p.etternavn + "</td><td>" + p.telefonnr + "</td><td>" + p.epost + "</td>";
+        ut += "</tr>";
+    }
 
+    ut += "</table>";
+
+    // Oppdaterer HTML-innholdet
+    billettListeElement.innerHTML = ut;
 }
-}
 
+// Funksjon for å slette alle billetter
 function slettB() {
-billettListe = [];
-visBilletter();
+    billettListe = [];
+    document.getElementById("billettListe").innerHTML="";
 }
+
+// Funksjon for å nullstille skjema og feilmeldinger
 function nullstillInput() {
-document.getElementById("film").value = "";
-document.getElementById("antall").value = "";
-document.getElementById("fornavn").value = "";
-document.getElementById("etternavn").value = "";
-document.getElementById("telefonnr").value = "";
-document.getElementById("epost").value = "";
+    document.getElementById("film").value = "";
+    document.getElementById("antall").value = "";
+    document.getElementById("fornavn").value = "";
+    document.getElementById("etternavn").value = "";
+    document.getElementById("telefonnr").value = "";
+    document.getElementById("epost").value = "";
+
+    // Tilbakestill feilmeldinger
+    resetErrorMessages();
 }
+
+// Funksjon for å tilbakestille feilmeldinger
+function resetErrorMessages() {
+    document.getElementById("antallError").innerHTML = "";
+    document.getElementById("fornavnError").innerHTML = "";
+    document.getElementById("etternavnError").innerHTML = "";
+    document.getElementById("telefonnrError").innerHTML = "";
+    document.getElementById("epostError").innerHTML = "";
+}
+
+// Funksjon for å vise feilmeldinger ved siden av tilsvarende input-felt
+function displayErrorMessages(errors) {
+    errors.forEach((error, index) => {
+        const errorElement = document.getElementById(`${getInputElementId(errors[index])}Error`);
+        if (errorElement) {
+            errorElement.innerHTML = error;
+        }
+    });
+}
+

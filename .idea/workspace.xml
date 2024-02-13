@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="to filer istedenfor en :D">
+    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="lessgooo ting funker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/Javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/files/Javascript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/index1.html" afterDir="false" />
@@ -34,16 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/files" />
@@ -57,6 +61,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707773428698</updated>
+      <workItem from="1707836345365" duration="3886000" />
+      <workItem from="1707840374285" duration="82000" />
+      <workItem from="1707840458302" duration="1000" />
+      <workItem from="1707840480361" duration="3472000" />
     </task>
     <task id="LOCAL−00001" summary="fuck dette">
       <option name="closed" value="true" />
@@ -128,7 +136,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1707832224217</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="lessgooo ting funker">
+      <option name="closed" value="true" />
+      <created>1707835897543</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1707835897543</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +169,7 @@
     <MESSAGE value="tester" />
     <MESSAGE value="tester igjen" />
     <MESSAGE value="to filer istedenfor en :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="to filer istedenfor en :D" />
+    <MESSAGE value="lessgooo ting funker" />
+    <option name="LAST_COMMIT_MESSAGE" value="lessgooo ting funker" />
   </component>
 </project>
