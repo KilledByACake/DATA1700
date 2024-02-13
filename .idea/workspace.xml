@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="tester igjen" />
+    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="to filer istedenfor en :D">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/Javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/files/Javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/index1.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -116,7 +121,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1707831922340</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="to filer istedenfor en :D">
+      <option name="closed" value="true" />
+      <created>1707832224217</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1707832224217</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +153,7 @@
     <MESSAGE value="script?" />
     <MESSAGE value="tester" />
     <MESSAGE value="tester igjen" />
-    <option name="LAST_COMMIT_MESSAGE" value="tester igjen" />
+    <MESSAGE value="to filer istedenfor en :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="to filer istedenfor en :D" />
   </component>
 </project>
