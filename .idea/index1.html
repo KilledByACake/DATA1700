@@ -4,54 +4,81 @@
     <meta charset="UTF-8">
     <title>Obligatorisk - KINOBILLETT OPPGAVE</title>
     <script>
-    let billettListe = [];
-    function KjopB(){
-        const film =document.getElementById("film").value;
-        const antall = document.getElementById("antall").value;
-        const fornavn = document.getElementById("fornavn").value;
-        const etternavn = document.getElementById("etternavn").value;
-        const telefonnr = document.getElementById("telefonnr").value;
-        const epost = document.getElementById("epost").value;
+        let billettListe = [];
 
-        if (!film || !antall || !fornacn || !etternavn || !telefonnr || !epost) {
-            alert("Dust! du må fylle ut alle felt for å kjøpe billett.")
-            return;
+        function KjopB() {
+            const film = document.getElementById("film").value;
+            const antall = document.getElementById("antall").value;
+            const fornavn = document.getElementById("fornavn").value;
+            const etternavn = document.getElementById("etternavn").value;
+            const telefonnr = document.getElementById("telefonnr").value;
+            const epost = document.getElementById("epost").value;
+
+            if (!film || !antall || !fornavn || !etternavn || !telefonnr || !epost) {
+                alert("Du må fylle ut alle felt for å kjøpe billett.");
+                return;
+            }
+
+            const billett = {
+                film,
+                antall,
+                fornavn,
+                etternavn,
+                telefonnr,
+                epost
+            };
+
+            billettListe.push(billett);
+            visBilletter();
+            nullstillInput();
         }
 
-        const billett = {
-            film,
-            antall,
-            fornavn,
-            etternavn,
-            telefonnr,
-            epost
-        };
-        billettListe.push(billett);
-        visBilletter();
-        nullstillInput();
-    }
-    function visBilletter(){
-        const billettListe1 = document.getElementById(billettListe)
-    }
+        function visBilletter() {
+            const billettListeElement = document.getElementById("billettListe");
+            billettListeElement.innerHTML = "";
+
+
+            //FIKS
+            for (let i = 0; i < billettListe.length; i++) {
+                const billettElement = document.createElement("li");
+                const billett = billettListe[i];
+                billettElement.textContent = `${billett.film} - ${billett.antall} billetter - ${billett.fornavn} ${billett.etternavn}`;
+                billettListeElement.appendChild(billettElement);
+
+                }
+        }
+
+        function slettB() {
+            billettListe = [];
+            visBilletter();
+        }
+
+        function nullstillInput() {
+            document.getElementById("film").value = "";
+            document.getElementById("antall").value = "";
+            document.getElementById("fornavn").value = "";
+            document.getElementById("etternavn").value = "";
+            document.getElementById("telefonnr").value = "";
+            document.getElementById("epost").value = "";
+        }
     </script>
 </head>
 <body>
 <h1>BESTILLING AV KINOBILLETTER</h1>
 Film: <select id="film" name="film">
-    <option value="film1">The Hub of Gits</option>
-    <option value="film2">Githubs Undergang</option>
-</select>
+    <option>Githubs Undergang</option>
+    <option>he Hub of Gits</option>
+</select><br>
 
-Antall billetter: <input type="number" id="antall" required>
-Fornavn: <input type="text" id="fornavn" required>
-Etternavn: <input type="text" id="etternavn" required>
-Telefonnummer: <input type="number" id="telefonnr" required>
-Epostadresse: <input type="text" id="epost" required>
-<button onclick="kjopB()">Kjøp en dum billett</button>
+Antall billetter: <input type="number" id="antall" required><br>
+Fornavn: <input type="text" id="fornavn" required><br>
+Etternavn: <input type="text" id="etternavn" required><br>
+Telefonnummer: <input type="number" id="telefonnr" required><br>
+Epostadresse: <input type="text" id="epost" required><br>
+<button onclick="KjopB()">Kjøp en dum billett</button>
 
 <h2>Alle billetter</h2>
 <ul id="billettListe"></ul>
-<button onclick="slettB">Slett alle dumme billetter</button>
-
+<button onclick="slettB()">Slett alle dumme billetter</button>
 </body>
 </html>
