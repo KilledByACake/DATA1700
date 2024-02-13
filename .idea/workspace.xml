@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="for helvete">
+    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="script?">
       <change beforePath="$PROJECT_DIR$/.idea/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/index1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +86,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1707774547203</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="script?">
+      <option name="closed" value="true" />
+      <created>1707774967531</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1707774967531</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +115,7 @@
     <MESSAGE value="ejjobgenpvemvåemv" />
     <MESSAGE value="HVORFOR KOMEMR DET IKKE OPP PÅ NETTSIDEN" />
     <MESSAGE value="for helvete" />
-    <option name="LAST_COMMIT_MESSAGE" value="for helvete" />
+    <MESSAGE value="script?" />
+    <option name="LAST_COMMIT_MESSAGE" value="script?" />
   </component>
 </project>
