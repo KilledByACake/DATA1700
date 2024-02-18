@@ -10,6 +10,10 @@ function KjopB() {
     const telefonnr = document.getElementById("telefonnr").value;
     const epost = document.getElementById("epost").value;
 
+    const telefonRegex = /^\d{8}$/;
+    const navnRegex = /^[a-zA-ZæøåÆØÅ\s]+$/;
+
+
     // Tilbakestill tidligere feilmeldinger
     resetErrorMessages();
 
@@ -32,8 +36,20 @@ function KjopB() {
     if (!telefonnr || isNaN(telefonnr)) {
         errorMessages.push("Du må skrive inn et gyldig telefonnummer.");
     }
+    //regex
     if (!epost || epost.indexOf('@') === -1) {
         errorMessages.push("Du må fylle inn en gyldig e-postadresse.");
+    }
+    if (!telefonRegex.test(telefonnr)) {
+        errorMessages.push("Du må skrive inn et gyldig telefonnummer med 8 siffer.");
+    }
+
+    if (!navnRegex.test(fornavn)) {
+        errorMessages.push("Fornavn må inneholde bare bokstaver.");
+    }
+
+    if (!navnRegex.test(etternavn)) {
+        errorMessages.push("Etternavn må inneholde bare bokstaver.");
     }
 
     // Håndterer feilmeldinger
@@ -75,6 +91,12 @@ function getInputElementId(errorMessage) {
             return "telefonnr";
         case "Du må fylle inn en gyldig e-postadresse.":
             return "epost";
+        case "Du må skrive inn et gyldig telefonnummer med 8 siffer.":
+            return "telefonnr";
+        case "Fornavn må inneholde bare bokstaver.":
+            return "fornavn";
+        case "Etternavn må inneholde bare bokstaver.":
+            return "etternavn";
         default:
             return "";
     }
