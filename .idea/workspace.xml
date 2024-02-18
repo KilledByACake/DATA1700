@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="huske å navngi label" />
+    <list default="true" id="a7e8f401-8852-4739-b2f8-463dcb83849f" name="Changes" comment="fiksa regex" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +153,14 @@
       <option name="presentableId" value="LOCAL−00013" />
       <updated>1707844118424</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL−00014" summary="fiksa regex">
+      <option name="closed" value="true" />
+      <created>1708293522143</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1708293522143</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +189,7 @@
     <MESSAGE value="lessgooo ting funker" />
     <MESSAGE value="må jo huske å lagre" />
     <MESSAGE value="huske å navngi label" />
-    <option name="LAST_COMMIT_MESSAGE" value="huske å navngi label" />
+    <MESSAGE value="fiksa regex" />
+    <option name="LAST_COMMIT_MESSAGE" value="fiksa regex" />
   </component>
 </project>
