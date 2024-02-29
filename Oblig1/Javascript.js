@@ -12,7 +12,7 @@ function KjopB() {
 
     const telefonRegex = /^\d{8}$/;
     const navnRegex = /^[a-zA-ZæøåÆØÅ\s]+$/;
-
+    const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Tilbakestill tidligere feilmeldinger
     resetErrorMessages();
@@ -21,23 +21,22 @@ function KjopB() {
     let errorMessages = [];
 
     // Validerer input-verdier
-    if (!film) {
+    if (film === "") { // Sjekker om film ikke er valgt
         errorMessages.push("Du må velge film for å kjøpe billett.");
     }
-    if (!antall || isNaN(antall)) {
+    if (!antall || isNaN(antall) || parseInt(antall) < 1) {
         errorMessages.push("Du må velge et gyldig tall for antall billetter.");
     }
-    if (!fornavn) {
+    if (!fornavn || !isNaN(fornavn)) {
         errorMessages.push("Du må fylle ut fornavn for å kjøpe billett.");
     }
-    if (!etternavn) {
+    if (!etternavn || !isNaN(etternavn)) {
         errorMessages.push("Du må fylle ut etternavn for å kjøpe billett.");
     }
-    if (!telefonnr || isNaN(telefonnr)) {
+    if (!telefonnr || !telefonRegex.test(telefonnr)) {
         errorMessages.push("Du må skrive inn et gyldig telefonnummer.");
     }
-    //regex
-    if (!epost || epost.indexOf('@') === -1) {
+    if (!epost || !epostRegex.test(epost)) {
         errorMessages.push("Du må fylle inn en gyldig e-postadresse.");
     }
     if (!telefonRegex.test(telefonnr)) {
@@ -76,6 +75,7 @@ function KjopB() {
     // Tilbakestill skjemaet
     nullstillInput();
 }
+
 // Funksjon for å mappe feilmeldinger til riktig input-felt
 function getInputElementId(errorMessage) {
     switch (errorMessage) {
@@ -128,7 +128,7 @@ function visBilletter() {
 // Funksjon for å slette alle billetter
 function slettB() {
     billettListe = [];
-    document.getElementById("billettListe").innerHTML="";
+    document.getElementById("billettListe").innerHTML = "";
 }
 
 // Funksjon for å nullstille skjema og feilmeldinger
@@ -146,6 +146,7 @@ function nullstillInput() {
 
 // Funksjon for å tilbakestille feilmeldinger
 function resetErrorMessages() {
+    document.getElementById("filmError").innerHTML = "";
     document.getElementById("antallError").innerHTML = "";
     document.getElementById("fornavnError").innerHTML = "";
     document.getElementById("etternavnError").innerHTML = "";

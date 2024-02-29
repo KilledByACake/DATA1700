@@ -1,0 +1,69 @@
+let billettListe = [];
+
+function KjopB() {
+    const inputs = {
+        film: document.getElementById("film").value,
+        antall: document.getElementById("antall").value,
+        fornavn: document.getElementById("fornavn").value,
+        etternavn: document.getElementById("etternavn").value,
+        telefonnr: document.getElementById("telefonnr").value,
+        epost: document.getElementById("epost").value
+    };
+
+    const valideringsRegler = {
+        film: { regex: /.+/, msg: "Du må velge film for å kjøpe billett." },
+        antall: { regex: /^\d+$/, msg: "Du må velge et gyldig tall for antall billetter.", custom: (val) => parseInt(val) > 0 },
+        fornavn: { regex: /^[a-zA-ZæøåÆØÅ\s]+$/, msg: "Fornavn må inneholde bare bokstaver." },
+        etternavn: { regex: /^[a-zA-ZæøåÆØÅ\s]+$/, msg: "Etternavn må inneholde bare bokstaver." },
+        telefonnr: { regex: /^\d{8}$/, msg: "Du må skrive inn et gyldig telefonnummer med 8 siffer." },
+        epost: { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, msg: "Du må fylle inn en gyldig e-postadresse." }
+    };
+
+    resetErrorMessages();
+    let errorMessages = validateInputs(inputs, valideringsRegler);
+
+    if (errorMessages.length > 0) {
+        displayErrorMessages(errorMessages);
+        return;
+    }
+
+    billettListe.push(inputs);
+    visBilletter();
+    nullstillInput();
+}
+
+function validateInputs(inputs, rules) {
+    let errors = [];
+    for (let key in inputs) {
+        const value = inputs[key];
+        const rule = rules[key];
+        if (rule && (!rule.regex.test(value) || (rule.custom && !rule.custom(value)))) {
+            errors.push({ id: key, msg: rule.msg });
+        }
+    }
+    return errors;
+}
+
+function displayErrorMessages(errors) {
+    errors.forEach((error) => {
+        const errorElement = document.getElementById(`${error.id}Error`);
+        if (errorElement) {
+            errorElement.innerHTML = error.msg;
+        }
+    });
+}
+
+function resetErrorMessages() {
+    ["film", "antall", "fornavn", "etternavn", "telefonnr", "epost"].forEach((id) => {
+        document.getElementById(`${id}Error`).innerHTML = "";
+    });
+}
+
+function visBilletter() {
+    const billettListeElement = document.getElementById("billettListe");
+    billettListeElement.innerHTML = billettListe.map((billett) => `<tr><td>${billett.fornavn}</td><td>${billett.etternavn}</td><td>${billett.telefonnr}</td><td>${billett.epost}</td></tr>`).join('');
+    billettListeElement.innerHTML = `<table><tr><th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th></tr>${billettListeElement.innerHTML}</table>`;
+}
+
+function nullstillInput() {
+    ["film", "antall", "fornavn", "etternavn", "telefonnr", "epost"].forEach((id)
